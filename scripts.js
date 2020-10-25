@@ -50,12 +50,6 @@ function makeQuestions() {
     }
 }
 
-function displayScore() {
-    document.getElementById("quiz").classList.add('d-none');
-    document.getElementById("submit-score").classList.remove('d-none');
-    userScoreEl.textContent = "Your final score is " + secondsLeft + ".";
-}
-
 startBtn.addEventListener("click", startTimer);
 submitBtn.addEventListener("click", function (event) {
     event.stopPropagation();
@@ -63,16 +57,6 @@ submitBtn.addEventListener("click", function (event) {
     
     window.location.href = './highscores.html'
 });
-
-function hideFeedback(){
-    var pEl= document.getElementsByClassName("feedback")[0]
-    pEl.style.display='none'
-}
-
-function showFeedback(){
-    var pEl= document.getElementsByClassName("feedback")[0]
-    pEl.removeAttribute('style');
-}
 
 answerChoices.addEventListener("click", function (event) {
     var pEl= document.getElementsByClassName("feedback")[0]
